@@ -63,7 +63,7 @@ class Component extends ReactComponent {
         <Grid item xs={8}>
           <Grid container justify="flex-start" className={classes.aboutContainer}>
             <Grid item xs={12} className={classes.aboutItem}>
-              <h2 className={classes.aboutHeader}><span className={classes.mintText}>About</span></h2>
+              <h2 className={classes.aboutHeader}><span className={classes.mintText}>About Me</span></h2>
             </Grid>
             <Grid container justify="flex-start">
               <Grid item xs={9}>
