@@ -9,7 +9,7 @@ const styles = theme => ({
 class Component extends ReactComponent {
   render() {
     return (
-      <Header title="Misc" />
+      <Header title="Gallery" />
     )
   }
 }
