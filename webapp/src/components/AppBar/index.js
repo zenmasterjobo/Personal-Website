@@ -19,7 +19,7 @@ const styles = theme => ({
     flexGrow: 1,
   },
   sectionDesktop: {
-    display: 'none',
+    display: 'flex',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
     },

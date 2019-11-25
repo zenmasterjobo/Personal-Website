@@ -4,22 +4,28 @@ import { withStyles } from '@material-ui/core/styles'
 
 const styles = theme => ({
   root: {
-    backgroundColor: '#182628',
+    backgroundColor: '#081829',
     height: 500,
     marginTop: -64,
   },
   imageSize: {
     height: 500,
-    width: '100%',
+    maxWidth: '100%',
   }
 })
 
 class Component extends ReactComponent {
   render() {
-    const { classes, title } = this.props
+    const { classes, title, fullImage, halfImage, quarterImage } = this.props
+
     return (
       <Grid container justify="center" className={classes.root}>
-        <img src={this.props.image} alt="wooot" className={classes.imageSize}/>
+        <Grid item>
+          <picture>
+            <source className={classes.imageSize} srcset={halfImage} media="(max-width: 1200px)"/>
+            <img className={classes.imageSize} src={fullImage} alt="header image"/>
+          </picture>
+        </Grid>
         <Grid item>
           {title}
         </Grid>
