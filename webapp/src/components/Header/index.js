@@ -16,18 +16,16 @@ const styles = theme => ({
 
 class Component extends ReactComponent {
   render() {
-    const { classes, title, fullImage, halfImage, quarterImage } = this.props
+    const { classes, title, fullImage, halfImage } = this.props
 
     return (
       <Grid container justify="center" className={classes.root}>
         <Grid item>
+          {title}
           <picture>
             <source className={classes.imageSize} srcset={halfImage} media="(max-width: 1200px)"/>
-            <img className={classes.imageSize} src={fullImage} alt="header image"/>
+            <img className={classes.imageSize} src={fullImage} alt="header"/>
           </picture>
-        </Grid>
-        <Grid item>
-          {title}
         </Grid>
       </Grid>
     )

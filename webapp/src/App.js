@@ -5,45 +5,51 @@ import Home from './scenes/Home'
 import Contact from './scenes/Contact'
 import Blog from './scenes/Blog'
 import Gallery from './scenes/Gallery'
-import Octocat from './icons/octocat32.png'
-import LinkedIn from './icons/linkedin.png'
+import Github from '@material-ui/icons/GitHub'
+import LinkedIn from '@material-ui/icons/LinkedIn'
+import HomeIcon from '@material-ui/icons/Home'
+import LibraryBooks from '@material-ui/icons/LibraryBooks'
+import PhotoSizeSelectActualIcon from '@material-ui/icons/PhotoSizeSelectActual'
+import Contacts from '@material-ui/icons/Contacts'
 
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      // We can use this to define what options are rendered to the nav bar
+      // We can use this to define what options are rendered to the nav bar / hamburger menue
       textButtons: [
         {
           to: '/',
           name: 'Home',
-        },
-        {
-          to: '/contact',
-          name: 'Contact',
+          icon: <HomeIcon/>
         },
         {
           to: '/blog',
           name: 'Blog',
+          icon: <LibraryBooks/>
+        },
+        {
+          to: '/contact',
+          name: 'Contact',
+          icon: <Contacts/>
         },
         {
           to: '/gallery',
           name: 'Gallery',
-        },
-      ],
-      iconButtons: [
-        {
-          to: 'https://www.github.com/zenmasterjobo',
-          alt: 'Github',
-          src: Octocat
+          icon: <PhotoSizeSelectActualIcon/>
         },
         {
-          to: 'https://www.linkedin.com/in/jordan-bergero',
-          alt: 'LinkedIn',
-          src: LinkedIn
+          href: 'https://www.github.com/zenmasterjobo',
+          name: 'Github',
+          icon: <Github/>
+        },
+        {
+          href: 'https://www.linkedin.com/in/jordan-bergero',
+          name: 'LinkedIn',
+          icon: <LinkedIn/>
         }
-      ]
+      ],
     }
   }
 
@@ -54,8 +60,8 @@ class App extends Component {
           <AppBar textButtons={this.state.textButtons} iconButtons={this.state.iconButtons}/>
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route path='/contact' component={Contact} />
             <Route path='/blog' component={Blog} />
+            <Route path='/contact' component={Contact} />
             <Route path='/gallery' component={Gallery} />
           </Switch>
         </div>

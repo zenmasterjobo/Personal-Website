@@ -9,7 +9,7 @@ const styles = theme => ({
     width: 200,
     height: 200,
     borderRadius: 0,
-    border: '5px solid #282C31'
+    border: '2px solid #F2F2F2'
   },
 });
 
@@ -17,7 +17,7 @@ class Component extends ReactComponent {
   render() {
     const { classes, image } = this.props;
     return (
-      <Grid container>
+      <Grid container justify="center" alignItems="center">
         <Avatar alt="Jordan Bergero" src={image} className={classes.bigAvatar}/>
       </Grid>
     );
